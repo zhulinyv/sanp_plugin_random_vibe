@@ -1,8 +1,8 @@
 <p align="center" >
-  <img src="./images/logo.png" width="256" height="256" alt="SANP"></a>
+  <img src="https://github.com/zhulinyv/sanp_plugin_random_artists/blob/main/images/logo.png?raw=true" width="256" height="256" alt="SANP"></a>
 </p>
 <h1 align="center">sanp_plugin_random_artists</h1>
-<h4 align="center">✨随机生成画风串✨</h4>
+<h4 align="center">✨还原旧版 vibe 随机出图的功能✨</h4>
 
 <p align="center">
     <img src="https://img.shields.io/badge/Python-3.10+-blue">
