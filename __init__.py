@@ -27,7 +27,7 @@ def gen_script(script_type, *args):
             script.write(
                 """from plugins.t2i.sanp_plugin_random_vibe import vibe
 while 1:
-    vibe({}, "{}")
+    vibe({}, r"{}")
 """.format(
                     args[0], args[1]
                 )
