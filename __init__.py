@@ -25,7 +25,7 @@ def gen_script(script_type, *args):
     with open("stand_alone_scripts.py", "w", encoding="utf-8") as script:
         if script_type == "vibe":
             script.write(
-                """from src.batch_vibe_transfer import vibe
+                """from plugins.t2i.sanp_plugin_random_vibe import vibe
 while 1:
     vibe({}, "{}")
 """.format(
