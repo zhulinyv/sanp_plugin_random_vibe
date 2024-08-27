@@ -1,7 +1,7 @@
 <p align="center" >
   <img src="https://github.com/zhulinyv/sanp_plugin_random_artists/blob/main/images/logo.png?raw=true" width="256" height="256" alt="SANP"></a>
 </p>
-<h1 align="center">sanp_plugin_random_artists</h1>
+<h1 align="center">sanp_plugin_random_vibe</h1>
 <h4 align="center">✨还原旧版 vibe 随机出图的功能✨</h4>
 
 <p align="center">
