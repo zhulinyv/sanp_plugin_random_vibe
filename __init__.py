@@ -60,6 +60,10 @@ def prepare_json(input_, sm, scale, negative, input_imgs):
     json_for_vibe["parameters"]["sm_dyn"] = (
         env.sm_dyn if (env.sm or (sm == 1)) and env.sm_dyn else False
     )
+    json_for_vibe["parameters"]["skip_cfg_above_sigma"] = (
+        19.343056794463642 if env.variety else None
+    )
+    json_for_vibe["parameters"]["dynamic_thresholding"] = env.decrisp
     json_for_vibe["parameters"]["noise_schedule"] = env.noise_schedule
     seed = random.randint(1000000000, 9999999999) if env.seed == -1 else env.seed
     json_for_vibe["parameters"]["seed"] = seed
@@ -97,9 +101,18 @@ def prepare_json(input_, sm, scale, negative, input_imgs):
 
 def vibe(blue_imgs: bool, input_imgs):
     if blue_imgs:
-        prompt, sm, scale, negative, choose_game, choose_character = t2i_input(
-            "随机(Random)", None, None, None, None, 0, 0
-        )
+        prompt = t2i_input(
+            "随机",
+            "随机",
+            "随机",
+            "随机",
+            "随机",
+            "随机",
+            "随机",
+            "随机",
+            "随机",
+            "随机",
+        )[0]
     else:
         file, prompt = batchtxt_input("", "最前面(Top)", False, False, False)
         sm = env.sm
