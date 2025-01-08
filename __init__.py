@@ -60,9 +60,7 @@ def prepare_json(input_, sm, scale, negative, input_imgs):
     json_for_vibe["parameters"]["sm_dyn"] = (
         env.sm_dyn if (env.sm or (sm == 1)) and env.sm_dyn else False
     )
-    json_for_vibe["parameters"]["skip_cfg_above_sigma"] = (
-        19.343056794463642 if env.variety else None
-    )
+    json_for_vibe["parameters"]["skip_cfg_above_sigma"] = 19 if env.variety else None
     json_for_vibe["parameters"]["dynamic_thresholding"] = env.decrisp
     json_for_vibe["parameters"]["noise_schedule"] = env.noise_schedule
     seed = random.randint(1000000000, 9999999999) if env.seed == -1 else env.seed
